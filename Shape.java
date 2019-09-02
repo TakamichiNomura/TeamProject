@@ -2,17 +2,14 @@
 /**
  * インターフェース Shape のための注釈をここに書きます.
  * 
- * @author (あなたの名前) 
- * @version (バージョン番号もしくは日付)
+ * @author (2018243144 노무라 타카미치) 
+ * @version (20190902)
  */
-
-public interface Shape
-{
-    /**
-     * メソッドのヘッダ例 - あなた自身のコメントで置き換えてください
-     * 
-     * @param  y    メソッドのためのサンプル引数
-     * @return        sampleMethod の戻り値
-     */
-    int sampleMethod(int y);
+interface Shape{ 
+    final double PI = 3.14; // 상수
+    void draw(); // 도형을 그리는 추상 메소드
+    double getArea(); // 도형의 면적을 리턴하는 추상 메소드
+    default public void redraw(){ // 디폴트 메소드
+        System.out.print("--- 다시 그립니다. "); draw(); }
 }
+
