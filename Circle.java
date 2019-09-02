@@ -2,32 +2,22 @@
 /**
  * クラス Circle の注釈をここに書きます.
  * 
- * @author (あなたの名前)
- * @version (バージョン番号もしくは日付)
+ * @author (2018243144 노무라타카미치 2018190042 모리모토 케이)
+ * @version (20190902)
  */
 public class Circle implements Shape
 {
-    // インスタンス変数 - コードに合わせて説明を書き換えます.
-    private int x;
-
-    /**
-     * Circle クラスのインスタンスのためのコンストラクタ
-     */
-    public Circle()
-    {
-        // インスタンス変数の初期化
-        x = 0;
+    public int radius;
+    public Circle(int radius){
+        this.radius = radius;
     }
-
-    /**
-     * メソッドの例 - メソッドとともにこのコメントも置き換えてください.
-     * 
-     * @param  y    メソッドのためのサンプル引数
-     * @return        x と y の和
-     */
-    public int sampleMethod(int y)
-    {
-        // ここにあなたのコードを書きます
-        return x + y;
+    public void draw(){
+        redrew();
+    }
+    public double getArea(){
+        return this.radius * this.radius * PI;
+    }
+    public void redrew(){
+        System.out.println("반지름이 "+ this.radius +"인 원입니다.");
     }
 }

@@ -1,33 +1,29 @@
-
+import java.math.BigDecimal;
 /**
  * クラス Oval の注釈をここに書きます.
  * 
- * @author (あなたの名前)
- * @version (バージョン番号もしくは日付)
+ * @author (2018243144 노무라타카미치 2018190042 모리모토 케이)
+ * @version (20190902)
  */
 public class Oval implements Shape
 {
-    // インスタンス変数 - コードに合わせて説明を書き換えます.
-    private int x;
-
-    /**
-     * Oval クラスのインスタンスのためのコンストラクタ
-     */
-    public Oval()
-    {
-        // インスタンス変数の初期化
-        x = 0;
+    public double first,secound;
+    public Oval(double first,double secound){
+        this.first = first;
+        this.secound = secound;
     }
-
-    /**
-     * メソッドの例 - メソッドとともにこのコメントも置き換えてください.
-     * 
-     * @param  y    メソッドのためのサンプル引数
-     * @return        x と y の和
-     */
-    public int sampleMethod(int y)
-    {
-        // ここにあなたのコードを書きます
-        return x + y;
+    BigDecimal bd1 = new BigDecimal(this.first);
+    BigDecimal bd2 = new BigDecimal(this.secound);
+    BigDecimal bd3 = new BigDecimal(PI);
+    BigDecimal sum = bd1.multiply(bd2);
+    BigDecimal result = sum.multiply(bd3);
+    public void draw(){
+        redrew();
+    }
+    public double getArea(){
+        return result;
+    }
+    public void redrew(){
+        System.out.println(this.first +"x"+ this.secound +"에 내접하는 타원입니다.");
     }
 }
