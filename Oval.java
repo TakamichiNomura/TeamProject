@@ -13,12 +13,9 @@ public class Oval implements Shape
         this.secound = secound;
     }
     public void draw(){
-        redrew();
+        System.out.println(this.first +"x"+ this.secound +"에 내접하는 타원입니다.");
     }
     public double getArea(){
         return this.first * this.secound * PI;
-    }
-    public void redrew(){
-        System.out.println(this.first +"x"+ this.secound +"에 내접하는 타원입니다.");
     }
 }

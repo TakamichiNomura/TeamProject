@@ -13,12 +13,9 @@ public class Rect implements Shape
         this.side = side;
     }
     public void draw(){
-        redrew();
+        System.out.println(this.length +"x"+ this.side +"크기의 사각형입니다.");
     }
     public double getArea(){
         return this.length * this.side;
-    }
-    public void redrew(){
-        System.out.println(this.length +"x"+ this.side +"크기의 사각형입니다.");
     }
 }
