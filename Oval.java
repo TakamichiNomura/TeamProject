@@ -1,4 +1,4 @@
-import java.math.BigDecimal;
+
 /**
  * クラス Oval の注釈をここに書きます.
  * 
@@ -12,16 +12,11 @@ public class Oval implements Shape
         this.first = first;
         this.secound = secound;
     }
-    BigDecimal bd1 = new BigDecimal(this.first);
-    BigDecimal bd2 = new BigDecimal(this.secound);
-    BigDecimal bd3 = new BigDecimal(PI);
-    BigDecimal sum = bd1.multiply(bd2);
-    BigDecimal result = sum.multiply(bd3);
     public void draw(){
         redrew();
     }
     public double getArea(){
-        return result;
+        return this.first * this.secound * PI;
     }
     public void redrew(){
         System.out.println(this.first +"x"+ this.secound +"에 내접하는 타원입니다.");
